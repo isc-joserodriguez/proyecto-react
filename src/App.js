@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import Mensaje from './Mensaje/index.js';
 
 function App() {
+  let estiloDeApp = {
+    backgroundColor: "blue",
+    fontSize: "20px",
+    border: "5px solid red"
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div
+        id="idHola"
+        className="hola"
+        style={estiloDeApp}
+      >
+        <div className="App">
+          <h1>Hola!!</h1>
+        </div>
+        <h1>Hola 3</h1>
+        <Mensaje atributo='Hola mundo!' />
+      </div>
+      <Mensaje atributo='Que tal?' />
+
+      <Mensaje atributo='Mensaje 1' />
+      <Mensaje atributo='Mensaje 2' />
+      <Mensaje atributo='Mensaje 3' />
+      <Mensaje atributo='Mensaje 4' />
     </div>
   );
 }
